@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/_210sdp"
+    android:layout_height="@dimen/_310sdp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:weightSum="2"
+        android:layout_margin="@dimen/_15sdp"
+        android:gravity="bottom"
+        android:elevation="@dimen/_10sdp"
+        android:id="@+id/item_container"
+        android:background="@drawable/white_card"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.2"
+            android:orientation="vertical"
+            android:background="@drawable/white_card"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:text="First Item Name"
+                android:textColor="#000"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.4" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="250 EGP"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/_11sdp"
+                app:layout_constraintStart_toStartOf="@+id/title"
+                app:layout_constraintTop_toBottomOf="@+id/title" />
+
+            <Button
+                android:id="@+id/plus_btn"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@drawable/background_round_white"
+                android:text="+"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.3" />
+
+            <TextView
+                android:id="@+id/quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:text="1"
+                android:layout_marginTop="0dp"
+                android:textColor="#000"
+                android:textSize="@dimen/_17ssp"
+                app:layout_constraintEnd_toEndOf="@+id/plus_btn"
+                app:layout_constraintStart_toStartOf="@+id/plus_btn"
+                app:layout_constraintTop_toBottomOf="@+id/plus_btn" />
+
+            <Button
+                android:id="@+id/min_btn"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:background="@drawable/background_round_white"
+                android:rotationX="180"
+                android:layout_marginTop="0dp"
+                android:textSize="@dimen/_13ssp"
+                android:text="-"
+                app:layout_constraintEnd_toEndOf="@+id/quantity"
+                app:layout_constraintStart_toStartOf="@+id/quantity"
+                app:layout_constraintTop_toBottomOf="@+id/quantity" />
+
+            <Button
+                android:id="@+id/add_to_card"
+                android:layout_width="@dimen/_110sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:background="@drawable/white_card"
+                android:text="Add To Card"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/price" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/card_img"
+        android:layout_width="@dimen/_90sdp"
+        android:layout_height="@dimen/_90sdp"
+        android:transitionName="item_name"
+        android:elevation="@dimen/_15sdp"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="@dimen/_80sdp"
+        />
+</FrameLayout>

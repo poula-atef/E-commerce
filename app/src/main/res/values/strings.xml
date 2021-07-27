@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">ItemProfileTest</string>
+    <string name="lorem">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.</string>
+    <string name="related_items">Related Items</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="password">Password...</string>
+    <string name="re_password">Re-Password...</string>
+    <string name="reset">Reset</string>
+    <string name="back"><![CDATA[<]]></string>
+    <string name="reset_title">Reset Your Password...</string>
+    <string name="create_account_title">Create New Account..</string>
+    <string name="have_account_title">Are You Already Have An Account?</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="_00_00_egp">00,00 EGP</string>
+    <string name="delivery_fees">Delivery Fees</string>
+    <string name="_25_00egp">25,0EGP</string>
+    <string name="total">Total</string>
+    <string name="check_out">check out</string>
+    <string name="all">All</string>
+    <string name="computers_laptops">Computers/Laptops</string>
+    <string name="mobiles_amp_tablets"><![CDATA[Mobiles & Tablets]]></string>
+    <string name="laptops">Laptops</string>
+    <string name="perfumes">Perfumes</string>
+    <string name="phones">Phones</string>
+    <string name="search_hint">Search...</string>
+    <string name="add_to_card">Add To card</string>
+    <string name="email">Email...</string>
+    <string name="forgot_your_password">Forgot Your Password ?.</string>
+    <string name="reset_paswword">Reset Paswword.</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="remember_me">Remember me.</string>
+    <string name="location">Location</string>
+    <string name="confirm">Confirm</string>
+    <string name="birth_date">Birth Date...</string>
+
+</resources>

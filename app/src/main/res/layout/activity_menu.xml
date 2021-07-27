@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".UI.MenuActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_margin="@dimen/_18sdp"
+            android:background="@drawable/white_card"
+            android:elevation="@dimen/_15sdp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="horizontal"
+            android:weightSum="7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/mic"
+                android:layout_width="0dp"
+                android:onClick="onComponentClick"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_voice" />
+
+            <EditText
+                android:id="@+id/search_et"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:background="#fff"
+                android:hint="@string/search_hint"
+                android:paddingStart="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_5sdp"
+                android:singleLine="true"
+                android:textColor="#000"
+                android:textColorHint="#888" />
+
+            <ImageView
+                android:id="@+id/qr"
+                android:onClick="onComponentClick"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_qr_code__1_" />
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/all"
+                    style="@style/itemStyle"
+                    android:onClick="onComponentClick"
+                    android:background="@drawable/white_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/all" />
+
+                <TextView
+                    android:id="@+id/perfumes"
+                    android:onClick="onComponentClick"
+                    style="@style/itemStyle"
+                    android:background="@drawable/white_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/perfumes" />
+
+                <TextView
+                    android:id="@+id/laptops"
+                    android:onClick="onComponentClick"
+                    style="@style/itemStyle"
+                    android:background="@drawable/white_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/computers_laptops" />
+
+                <TextView
+                    android:id="@+id/phones"
+                    android:onClick="onComponentClick"
+                    style="@style/itemStyle"
+                    android:background="@drawable/white_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mobiles_amp_tablets" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView"
+                    style="@style/titleStyle"
+                    android:alpha="0.0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/phones"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/phone_rec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    style="@style/titleStyle"
+                    android:layout_width="wrap_content"
+                    android:alpha="0.0"
+                    android:layout_height="wrap_content"
+                    android:text="@string/laptops"
+                    app:layout_constraintStart_toStartOf="@+id/phone_rec"
+                    app:layout_constraintTop_toBottomOf="@+id/phone_rec" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/laps_rec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    style="@style/titleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.0"
+                    android:text="@string/perfumes"
+                    app:layout_constraintStart_toStartOf="@+id/laps_rec"
+                    app:layout_constraintTop_toBottomOf="@+id/laps_rec" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/perf_rec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView3" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ProgressBar
+        android:id="@+id/pb"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_gravity="center"
+        android:indeterminateTint="@color/purple_500"
+        />
+    <FrameLayout
+        android:id="@+id/card"
+        android:layout_width="@dimen/_48sdp"
+        android:layout_height="@dimen/_48sdp"
+        android:layout_marginBottom="@dimen/_17sdp"
+        android:onClick="onComponentClick"
+        android:text=">"
+        android:layout_gravity="center|bottom"
+        android:textSize="@dimen/_22ssp"
+        android:gravity="center"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/purple_500"
+        android:elevation="@dimen/_7sdp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" >
+        <ImageView
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_shopping"
+            />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/exit"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginBottom="@dimen/_17sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:onClick="onComponentClick"
+        android:text=">"
+        android:layout_gravity="center|bottom|left"
+        android:textSize="@dimen/_22ssp"
+        android:gravity="center"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/purple_500"
+        android:elevation="@dimen/_7sdp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" >
+        <ImageView
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_margin="@dimen/_8sdp"
+            android:src="@drawable/ic_exit"
+            android:layout_gravity="center"
+            android:rotationY="180"
+            />
+    </FrameLayout>
+
+</FrameLayout>
